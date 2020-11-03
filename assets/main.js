@@ -6,9 +6,9 @@
   $('.js-form').submit(function () {
     var form = this;
 
-
+//<svg class="icon spin"><use xlink:href="#icon-loading"></use></svg>
     $("#comment-form-submit").html(
-      '<svg class="icon spin"><use xlink:href="#icon-loading"></use></svg> Sending...'
+      ' Attendi...'
     );
     $(form).addClass('disabled');
 
@@ -18,7 +18,7 @@
       data: $(this).serialize(),
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
-        showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/travisdowns/travisdowns.github.io/pulls">pending</a>. It will appear when approved.');
+        showModal('Commento inviato', 'Grazie! Il tuo commento è in <a href="https://github.com/canebabbuino/canebabbuino.github.io/pulls">approvazione</a>. Comparirà sulla pagina al più presto.');
 
         $("#comment-form-submit")
           .html("Submit");
@@ -30,7 +30,7 @@
       error: function (err) {
         console.log(err);
         var ecode = (err.responseJSON || {}).errorCode || "unknown";
-        showModal('Error', 'An error occured.<br>[' + ecode + ']');
+        showModal('Errore', 'Si è verificato un errore.<br>[' + ecode + ']');
         $("#comment-form-submit").html("Submit")
         $(form).removeClass('disabled');
         grecaptcha.reset();
