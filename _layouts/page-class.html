@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="post">
+<!--
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+-->
+  <div class="post-content">
+    {{ content }}
+  <ul class="post-list">
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    {%- assign local_posts = site.posts | where: "category", page.category -%}
+    {%- for post in local_posts -%}
+    <li>
+      <span class="post-meta">{{ post.date | date: date_format }} - {{ post.author }}</span>
+      <h3 style="margin-top:0">
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {%- if site.show_excerpts -%}
+        {{ post.excerpt }} <a href="{{ post.url | relative_url }}">Continua a leggere</a>
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+
+</article>

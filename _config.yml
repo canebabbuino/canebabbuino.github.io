@@ -1,0 +1,106 @@
+title: Cane Babbuino
+
+authors:
+  matteo:
+    name: Matteo Del Prete
+    display_name: Matteo Del Prete
+    email: matteodelprete91@gmail.com
+  davide:
+    name: Davide Guerra
+    display_name: Davide Guerra
+    email: davide.guerra3@gmail.com
+  angelo:
+    name: Angelo Maggi
+    display_name: Angelo Maggi
+    email: angelo.maggi.fm@gmail.com
+
+description: > # this means to ignore newlines until "show_excerpts:"
+  Blog di scienza, divulgazione e probabilmente molto altro.
+
+social:
+  twitter: CBabbuino
+  # instagram: CBabbuino
+  # facebook: cane_babbuino
+  # youtube: cane_babbuino
+  # telegram: CBabbuino
+  # github: canebabbuino
+  email: canebabbuino.cb@gmail.com
+
+minima:
+  date_format: "%D"
+#  social_links:
+    # twitter: CBabbuino
+    # github:  jekyll
+    # devto: jekyll
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
+    # keybase: jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+    # GitLab instances
+    # gitlab:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+
+collections:
+  authors:
+
+show_excerpts: true # set to true to show excerpts on the homepage
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+ - cane.md
+ - babbuino.md
+ - authors.md
+
+# Build settings
+theme: minima
+
+minima:
+  skin: classic-cb
+
+defaults:
+  # Post defaults
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      comments: true
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+
+# The URL for the staticman API bridge endpoint
+# You will want to modify some of the values:
+#  ${github-username}: canebabbuino
+#  ${blog-repo}: canebabbuino.github.io
+#  master: this the branch out of which your blog is published, often master or gh-pages
+#  ${bridge_app_name}: staticman-cb
+#  comments: the so-called property, this defines the key in staticman.yml where the configuration is found
+staticman_url: https://staticman-cb.herokuapp.com/v2/entry/canebabbuino/canebabbuino.github.io/master/comments
+
+# reCaptcha configuration info: the exact same site key and *encrypted* secret that you used in staticman.yml
+reCaptcha:
+  siteKey: 6Le1Pt4ZAAAAABrMAskVPLfGuxRtdb61r_Q2Pzd0
+  secret: cw2gLwzrUN136KOQkfxOGgNH9jnR8dGwSxRSm1/k1ErXRtwXn1L2uokwu61ei9seNWg2XD7OWQAN9daAyjCv1iYE78mXwsTGPJKKgKOWcmlBc+9E1JjGg2QCFGYm5bXpPjTP7o+ymwPAJ3VyHyH8pGfSRjrvF3S32iG2i5dkoV1+kJ1nV/9ZXtHQKpQKJMtXrkisamf5evU5ZqZoDe5XhtT0WEId5dXOo9tILoFtu3ZHpdxad1+0dNh+tHaPzLeHZITBXSt8UWQrN+3HhdLrDFqltiox1e39VNpcRT/o3YclKXIf7znOmxV1pZpyVmhsIX8MgTqXmXH82jYOi97km4U9giU8iMj7l/8xSSzlJpqzVG8rMo1t6tnVShi3bh8saEJmldp/zo5FM58KYwBlNvu4ELPSM5w3PCM1m3xjcp6jpuHlumAoGYEEZkGjcvx+2gDKGsFqw/3eB7/bv+RtdtLdPmhIFEmXSKIWpVwuVNL/PtKsRLx2M1+9EwsFb+1Oapde7kgzJXoI9PCqjC20+27kzxXDsQ2RGvFqplg5MTMfXbf9mnzMlaJzDsxjCSqP4wb7ifhVuCjfjYhzO1GWdGAmIBHM2oXygHJYi6GG2Dksa7/HlubhatwRajrHTXwkuAL2SLghcyxsHzuxU8WnIlXqerx6u/i5z9x6Vj3APrE=
